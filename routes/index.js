@@ -7,9 +7,14 @@ const templateTypes = [
 	{name: "Handlebars", usefulness: "Awesome"}
 ];
 
-/* GET home page. */
+/* GET home page. with EJS */
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express', description: "better!!", templates: templateTypes });
+// });
+
+/* GET home page. with HANDLEBARS */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', description: "better!!", templates: templateTypes });
+  res.render('home', { title: 'Handlebars', description: "better!!", templates: templateTypes });
 });
 
 module.exports = router;
